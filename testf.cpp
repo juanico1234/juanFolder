@@ -66,7 +66,7 @@ int main(){
     pushTail(a);
   }
 
-  printf("Sorting : 4"); 
+  printf("Sorting :   "); 
    sortDLinkedList();
   printLinkedList();
 
