@@ -17,7 +17,7 @@ Node *createnode(const char *nama,int score){
     return newNode;
 }
 
-void pushTail(){
+void pushTail(const char *nama,int nilai){
     Node *temp = createNode(nama,nilai);
 
     if(!head){
@@ -27,7 +27,26 @@ void pushTail(){
         akhir = temp;
     }
 }
-void pushHead(){
-    
+void pushHead(const char *nama, int nilai){
+    Node *temp = createNode(nama,nilai);
+
+    if(!awal){
+        awal=akhir=temp;
+    }else{
+        temp->next=awal;
+        awal=temp;
+    }
 }
 
+int main(){
+    int a,b,c,d;
+    printf("Banyaknya List ke-1: ");scanf("%d",&b);
+    printf("Masukan list ke 1 =\n");
+    for(int i=0;i<m;i++){
+        scanf("%d",&c);
+        pushTail(c);
+    }
+
+    printf("Banyaknya List ke-2 :"); scanf("%d",&n);
+    printf("TYpo");
+}
