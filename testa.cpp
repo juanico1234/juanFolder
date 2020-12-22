@@ -66,7 +66,6 @@ int main(){
     scanf(" %d" , &c);
     pushTail(c);
   }
-
   printf("Banyak List 2 : "); scanf("%d" , &a);
   printf("Input array number 2 :\n");
   for(int i=0 ; i<a ; i++){
@@ -76,7 +75,8 @@ int main(){
   sortLinkedList();
   printf("List Akhir :\n");
   printLinkedList();
-printf("\n");
-return 0;
+  printf("\n");
+  
+  return 0;
 
 }
