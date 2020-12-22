@@ -9,10 +9,10 @@ struct Node{
 
 } *awal, *akhir;
 
-Node *createnode(const char *nama,int score){
+Node *createNode(const char *nama,int score){
     Node *newNode = (Node*)malloc(sizeof(Node));
-    strcpy(newNode->score=score);
-    newNode->score = score;
+    strcpy(newNode->nilai=score);
+    newNode->nilai = score;
     newNode->next=NULL;
     return newNode;
 }
@@ -20,7 +20,7 @@ Node *createnode(const char *nama,int score){
 void pushTail(const char *nama,int nilai){
     Node *temp = createNode(nama,nilai);
 
-    if(!head){
+    if(!awal){
         awal = akhir = temp;
     }else{
         akhir->next=temp;
@@ -38,15 +38,32 @@ void pushHead(const char *nama, int nilai){
     }
 }
 
+void printLinkedList(){
+    Node *curr = awal;
+    while(curr !=NULL){
+        printf("%s ->",curr->nama);
+        curr=curr->next;
+    }
+    printf("NULL\n");
+}
+
 int main(){
     int a,b,c,d;
     printf("Banyaknya List ke-1: ");scanf("%d",&b);
     printf("Masukan list ke 1 =\n");
-    for(int i=0;i<m;i++){
+    for(int i=0;i<b;i++){
         scanf("%d",&c);
-        pushTail(c);
+        pushTail("Saiya",c);
     }
 
-    printf("Banyaknya List ke-2 :"); scanf("%d",&n);
-    printf("TYpo");
+    printf("Banyaknya List ke-2 :"); scanf("%d",&a);
+    printf("Masukan list ke 2 :\n");
+    for(int i=0;i<a;i++){
+        scanf("%d",&d);
+        pushTail("Jean",d);
+    }
+    printLinkedList();
+
+    printf("\n");
+    return 0;
 }
